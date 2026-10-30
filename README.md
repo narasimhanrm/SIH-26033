@@ -224,41 +224,10 @@ This creates a transparent transaction trail and allows farmers to understand th
 
 ## System Flow
 
-```mermaid
-flowchart TD
-    A[Farmer / FPO] --> B[Supply Registration]
-    C[Consumer / Bulk Buyer] --> D[Demand Request]
+<img width="2430" height="1496" alt="farmlink_technical_architecture" src="https://github.com/user-attachments/assets/914991f0-07a6-4b48-a044-f9057a4212e4" />
+<img width="2430" height="1326" alt="farmlink_ai_logistics_loop" src="https://github.com/user-attachments/assets/29604dd0-9e3f-4806-836a-3dad7e232523" />
+<img width="2430" height="1326" alt="farmlink_demand_first_workflow" src="https://github.com/user-attachments/assets/656415a3-f582-4f12-b1c0-80d78304758a" />
 
-    B --> E[Supply Database]
-    D --> F[Demand Database]
-
-    E --> G[Matching & Aggregation Engine]
-    F --> G
-
-    G --> H{Order Can Be Fulfilled?}
-
-    H -->|Single Farmer| I[Direct Farmer-Buyer Match]
-    H -->|Multiple Farmers Required| J[Multi-Farmer Aggregation]
-
-    I --> K[Order Confirmation]
-    J --> K
-
-    K --> L[Logistics Optimization]
-
-    L --> M[Collection & Delivery Route]
-
-    M --> N[Quality / Quantity Verification]
-    N --> O[Digital Settlement]
-
-    O --> P[Farmer Payment]
-    O --> Q[Buyer Delivery]
-
-    E --> R[AI Demand Forecasting]
-    F --> R
-
-    R --> S[Demand Prediction]
-    S --> T[Farmer / FPO Decision Support]
-```
 
 ## Implementation Methodology
 
